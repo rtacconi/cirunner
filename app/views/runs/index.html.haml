@@ -1,0 +1,4 @@
+%h1 List of runs for project '#{@project.name}'
+%ul
+  - @runs.each do |run|
+    %li ##{link_to run.id, project_run_path(@project, run)} executed at #{run.updated_at}

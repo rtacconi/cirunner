@@ -1,0 +1,2 @@
+%h1 Run for project '#{@project.name}' executed at #{@run.updated_at}
+= @run.output.gsub("\n", "<br>").html_safe

@@ -1,0 +1,24 @@
+.row
+  %p.notice= notice
+
+.row
+  .span10
+    %p
+      %strong Name:
+      = @project.name
+    %p
+      %strong Repositor url:
+      = @project.repository_url
+
+    %p
+      %strong Repository type:
+      = @project.repository_type
+
+
+    = link_to 'Edit', edit_project_path(@project)
+    |
+    = link_to 'Back', projects_path
+
+  .span2
+    = simple_form_for @project, url: project_runs_path(@project), method: 'post' do |f|
+      = f.submit 'Run project'
