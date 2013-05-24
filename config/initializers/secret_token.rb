@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Cirunner::Application.config.secret_key_base = '9a5556e5ae4f2903704840771fb686af27152e037ec2fdc589cf8c683cd85eb79f6169b2125e00c6ad5748298a3d0a66a64229001d6313b1f4de2eb8d09795fd'
+ScriptRunner::Application.config.secret_key_base = '9a5556e5ae4f2903704840771fb686af27152e037ec2fdc589cf8c683cd85eb79f6169b2125e00c6ad5748298a3d0a66a64229001d6313b1f4de2eb8d09795fd'

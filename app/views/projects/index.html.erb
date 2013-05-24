@@ -1,13 +1,11 @@
 <h1>Listing projects</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Name</th>
       <th>Repository url</th>
       <th>Repository type</th>
-      <th></th>
-      <th></th>
       <th></th>
     </tr>
   </thead>
@@ -15,12 +13,15 @@
   <tbody>
     <% @projects.each do |project| %>
     <tr>
-      <td><%= project.name %></td>
-      <td><%= project.repository_url %></td>
+      <td><%= link_to project.name, project %></td>
+      <td><%= link_to project.repository_url, project.repository_url, target: '_blank' %></td>
       <td><%= project.repository_type %></td>
-      <td><%= link_to 'Show', project %></td>
-      <td><%= link_to 'Edit', edit_project_path(project) %></td>
-      <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <td>
+        <%= simple_form_for project, url: project_runs_path(project), method: 'post' do |f| %>
+          <%= f.submit 'Run project', class: 'btn' %>
+        <% end %>
+        <%= link_to 'Runs', project_runs_path(project), class: 'btn' %>
+      </td>
     </tr>
     <% end %>
   </tbody>
@@ -28,4 +29,4 @@
 
 <br />
 
-<%= link_to 'New Project', new_project_path %>
+<%= link_to 'New Project', new_project_path, class: 'btn' %>

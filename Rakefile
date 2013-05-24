@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Cirunner::Application.load_tasks
+ScriptRunner::Application.load_tasks

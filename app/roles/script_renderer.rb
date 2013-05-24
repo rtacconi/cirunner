@@ -1,6 +1,6 @@
 module ScriptRenderer
   def render_script(script)
-    content = File.open("#{Rails.root}/app/scripts/#{script}").read
+    content = File.open(script).read
     renderer = ERB.new(content)
     renderer.result
   end

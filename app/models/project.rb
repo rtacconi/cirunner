@@ -3,5 +3,7 @@ class Project < ActiveRecord::Base
 
   has_many :runs
 
+  has_many :script_lists
+
   serialize :scripts
 end

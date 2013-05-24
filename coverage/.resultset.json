@@ -44,15 +44,9 @@
         null,
         1
       ],
-      "/Users/riccardotacconi/dev/cirunner/config/environments/test.rb": [
+      "/Users/riccardotacconi/dev/cirunner/config/environments/development.rb": [
         1,
         null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
         null,
         null,
         null,
@@ -61,7 +55,6 @@
         null,
         null,
         1,
-        1,
         null,
         null,
         1,
@@ -69,11 +62,10 @@
         null,
         null,
         1,
-        null,
-        null,
         1,
         null,
         null,
+        1,
         null,
         null,
         1,
@@ -408,10 +400,6 @@
         null,
         1,
         1,
-        1,
-        null,
-        null,
-        1,
         null,
         null,
         1,
@@ -500,12 +488,61 @@
         null,
         null,
         null,
+        1,
+        2,
+        2,
+        2,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
         null,
         1,
         null,
         null
       ],
+      "/Users/riccardotacconi/dev/cirunner/app/models/project.rb": [
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null
+      ],
       "/Users/riccardotacconi/dev/cirunner/app/models/run.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/riccardotacconi/dev/cirunner/app/models/script_result.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/riccardotacconi/dev/cirunner/app/models/script.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/riccardotacconi/dev/cirunner/app/models/script_list.rb": [
+        1,
+        1,
+        1,
         1,
         1,
         null
@@ -609,6 +646,10 @@
         null,
         null,
         1,
+        0,
+        0,
+        0,
+        0,
         null,
         null,
         1,
@@ -687,11 +728,54 @@
         1,
         null
       ],
+      "/Users/riccardotacconi/dev/cirunner/spec/models/script_list_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/Users/riccardotacconi/dev/cirunner/spec/models/script_result_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/Users/riccardotacconi/dev/cirunner/spec/models/script_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        null
+      ],
       "/Users/riccardotacconi/dev/cirunner/spec/models/user_spec.rb": [
         1,
         null,
         1,
         1,
+        null
+      ],
+      "/Users/riccardotacconi/dev/cirunner/spec/roles/script_lister_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        null,
+        null
+      ],
+      "/Users/riccardotacconi/dev/cirunner/app/roles/script_lister.rb": [
+        1,
+        1,
+        1,
+        null,
         null
       ],
       "/Users/riccardotacconi/dev/cirunner/spec/views/runner/create.html.haml_spec.rb": [
@@ -737,6 +821,6 @@
         null
       ]
     },
-    "timestamp": 1369236727
+    "timestamp": 1369423710
   }
 }

@@ -8,7 +8,7 @@
       = @project.name
     %p
       %strong Repositor url:
-      = @project.repository_url
+      = link_to @project.repository_url, @project.repository_url, target: '_blank'
 
     %p
       %strong Repository type:
@@ -21,4 +21,5 @@
 
   .span2
     = simple_form_for @project, url: project_runs_path(@project), method: 'post' do |f|
-      = f.submit 'Run project'
+      = f.submit 'Run project', class: 'btn'
+    = link_to 'Runs', project_runs_path(@project), class: 'btn'

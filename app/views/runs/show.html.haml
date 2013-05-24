@@ -1,2 +1,7 @@
-%h1 Run for project '#{@project.name}' executed at #{@run.updated_at}
-= @run.output.gsub("\n", "<br>").html_safe
+%h1 Run for project '#{link_to "#{@project.name}", @project}' executed at #{@run.updated_at}
+- @run.script_results.each do |script_result|
+  %p Script name: #{script_result.script.name}
+  %p Pid: #{script_result.pid}
+  %p Exit code: #{script_result.exit_code}
+  %div= script_result.output.gsub("\n", "<br>").html_safe if script_result.output
+  %hr

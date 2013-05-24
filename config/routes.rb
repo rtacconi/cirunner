@@ -1,12 +1,8 @@
-Cirunner::Application.routes.draw do
+ScriptRunner::Application.routes.draw do
 
   devise_for :users
 
   resources :projects do
-    member do
-      get 'run'
-    end
-
     resources :runs
   end
 
