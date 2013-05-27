@@ -20,12 +20,14 @@ class RunnerOnProject
       result = @project.call_script(executable_script)
       script_result.pid = result[:pid]
       script_result.exit_code = result[:exit_code]
-      Rails.logger.debug "********** #{script_result.exit_code}"
+      Rails.logger.debug "********** RunnerOnProject **** #{result[:exit_code]}"
       script_result.output = result[:output]
       # add all script_result to the run object to have an ordered list of results, one per script
       run.script_results << script_result
     end
 
     run.save
+
+    run
   end
 end

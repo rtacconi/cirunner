@@ -2,8 +2,10 @@ ScriptRunner::Application.routes.draw do
 
   devise_for :users
 
-  resources :projects do
-    resources :runs
+  focused_controller_routes do
+    resources :projects do
+      resources :runs
+    end
   end
 
   get 'scripts' => 'scripts#index'

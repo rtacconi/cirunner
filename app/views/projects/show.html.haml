@@ -1,25 +1,22 @@
 .row
-  %p.notice= notice
-
-.row
   .span10
     %p
       %strong Name:
-      = @project.name
+      = project.name
     %p
       %strong Repositor url:
-      = link_to @project.repository_url, @project.repository_url, target: '_blank'
+      = link_to project.repository_url, project.repository_url, target: '_blank'
 
     %p
       %strong Repository type:
-      = @project.repository_type
+      = project.repository_type
 
 
-    = link_to 'Edit', edit_project_path(@project)
+    = link_to 'Edit', edit_project_path(project)
     |
     = link_to 'Back', projects_path
 
   .span2
-    = simple_form_for @project, url: project_runs_path(@project), method: 'post' do |f|
+    = simple_form_for project, url: project_runs_path(project), method: 'post' do |f|
       = f.submit 'Run project', class: 'btn'
-    = link_to 'Runs', project_runs_path(@project), class: 'btn'
+    = link_to 'Runs', project_runs_path(project), class: 'btn'

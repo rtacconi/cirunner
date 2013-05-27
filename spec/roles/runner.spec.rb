@@ -5,7 +5,8 @@ describe Runner do
     project = OpenStruct.new
     project.extend Runner
     result = project.call_script('wrong_command')
-    result[:exit_code].should > "0"
+    result[:exit_code].should > 0
+    result[:exit_code].should be_an_instance_of Fixnum
   end
 
   it "should return a PID" do

@@ -17,6 +17,13 @@ GIT
       actionpack (>= 4.0.0.beta, < 4.1)
       activemodel (>= 4.0.0.beta, < 4.1)
 
+GIT
+  remote: https://github.com/JeanMertz/focused_controller.git
+  revision: 257395a06668b56ab73fb17578e676ec497e48ac
+  specs:
+    focused_controller (1.0.0)
+      actionpack (>= 4.0.0.beta)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -177,6 +184,7 @@ DEPENDENCIES
   capybara (>= 2.0.3)
   coffee-rails (~> 4.0.0.beta1)
   devise!
+  focused_controller!
   haml-rails
   jbuilder (~> 1.0.1)
   jquery-rails

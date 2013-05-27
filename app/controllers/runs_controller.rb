@@ -1,21 +1,22 @@
-class RunsController < ApplicationController
-  def index
-    @project = Project.find(params[:project_id])
-    @runs = @project.runs
+module RunsController
+  class Action < ApplicationController
+    include FocusedController::Mixin
+    expose(:project) { Project.find(params[:project_id]) }
   end
 
-  def show
-    @project = Project.find(params[:project_id])
-    @run = Run.find(params[:id])
+  class Index < Action
+    expose(:runs) { project.runs }
   end
 
-  def create
-    @project = Project.find(params[:project_id])
-    RunnerOnProject.new(@project).call
-    @run = @project.runs.last
-    render 'show'
+  class Show < Action
+    expose(:run) { Run.find(params[:id]) }
   end
 
-  def update
+  class Create < Action
+    expose(:run) { RunnerOnProject.new(project).call }
+
+    def call
+      redirect_to project_run_path project, run
+    end
   end
 end
