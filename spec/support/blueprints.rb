@@ -21,11 +21,6 @@ ScriptResult.blueprint do
 
 end
 
-Script.blueprint do
-  name { "script1.erb" }
-  ordinal { 1 }
-end
-
 ScriptList.blueprint do
   # Attributes here
 end

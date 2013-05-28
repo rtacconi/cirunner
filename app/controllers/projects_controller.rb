@@ -29,7 +29,7 @@ module ProjectsController
 
   # POST /projects
   class Create < Action
-    expose(:project) { Project.find(params[:id]) }
+    expose(:project) { Project.new(project_params) }
 
     def call
       respond_to do |format|
