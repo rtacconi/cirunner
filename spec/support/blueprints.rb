@@ -14,7 +14,7 @@ Project.blueprint do
 end
 
 Run.blueprint do
-  # Attributes here
+  project
 end
 
 ScriptResult.blueprint do

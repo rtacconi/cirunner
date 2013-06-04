@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130524182749) do
+ActiveRecord::Schema.define(version: 20130529170524) do
 
   create_table "projects", force: true do |t|
     t.string   "name"
@@ -19,7 +19,6 @@ ActiveRecord::Schema.define(version: 20130524182749) do
     t.string   "repository_type"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.text     "scripts"
   end
 
   create_table "runs", force: true do |t|
@@ -30,26 +29,20 @@ ActiveRecord::Schema.define(version: 20130524182749) do
 
   create_table "script_lists", force: true do |t|
     t.integer  "project_id"
-    t.integer  "script_id"
     t.integer  "ordinal"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "script_name"
   end
 
   create_table "script_results", force: true do |t|
     t.text     "output"
     t.integer  "pid"
     t.integer  "exit_code"
-    t.integer  "script_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "run_id"
-  end
-
-  create_table "scripts", force: true do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string   "script_name"
   end
 
   create_table "users", force: true do |t|

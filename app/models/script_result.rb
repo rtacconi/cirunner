@@ -1,4 +1,4 @@
 class ScriptResult < ActiveRecord::Base
-  belongs_to :script
+  validates :script_name, presence: true
   belongs_to :run
 end

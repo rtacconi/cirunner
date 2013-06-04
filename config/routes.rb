@@ -10,6 +10,10 @@ ScriptRunner::Application.routes.draw do
     root to: 'projects#index'
   end
 
+  resources :projects do
+    resource :script_lists
+  end
+
   get 'scripts' => 'scripts#index'
 
   # The priority is based upon order of creation: first created -> highest priority.

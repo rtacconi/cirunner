@@ -1,10 +1,8 @@
 class ScriptsController < ApplicationController
-  class Action < ApplicationController
-    include FocusedController::Mixin
+  respond_to :json
+
+  def index
+    respond_with Script.all
   end
 
-
-  class Index < Action
-    expose(:scripts) { Dir["#{Rails.root}/app/scripts/*"] }
-  end
 end

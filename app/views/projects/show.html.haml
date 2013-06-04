@@ -20,3 +20,15 @@
     = simple_form_for project, url: project_runs_path(project), method: 'post' do |f|
       = f.submit 'Run project', class: 'btn'
     = link_to 'Runs', project_runs_path(project), class: 'btn'
+
+.row
+  .span12
+    %div{"ng-app" => ""}
+      %div{"ng-controller" => "ScriptsCtrl"}
+        %span{:id => "project-id", "data-project-id" => project.id}
+        %form{"ng-submit" => "addEntry()"}
+          Select a script
+          %select{"ng-model" => "data", "ng-options" => "currOption for currOption in data.scripts", "ng-model" => "data.name"}
+          %input{"type" => "submit", "value" => "Add"}
+
+        %p {{data.name}}
