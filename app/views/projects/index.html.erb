@@ -1,51 +1,27 @@
 <h1>Projects</h1>
 
-<table class="table">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Repository url</th>
-      <th>Repository type</th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<div class="row">
     <% projects.each do |project| %>
-    <tr>
-      <td><%= link_to project.name, project %></td>
-      <td><%= link_to project.repository_url, project.repository_url, target: '_blank' %></td>
-      <td><%= project.repository_type %></td>
-      <td>
-        <%= simple_form_for project, url: project_runs_path(project), method: 'post' do |f| %>
-          <%= f.submit 'Run project', class: 'btn' %>
-        <% end %>
-        <%= link_to 'Runs', project_runs_path(project), class: 'btn' %>
-      </td>
-    </tr>
+      <div class="span4">
+        <div class="well"><h3><%= link_to project.name, project %></h3>
+          <span class="label label-success">Success</span>
+          <p><%= link_to project.repository_url, project.repository_url, target: '_blank' %></p>
+          <p>Repository type: <%= project.repository_type %></p>
+          <p>
+            <%= simple_form_for project, url: project_runs_path(project), method: 'post' do |f| %>
+              <%= f.submit 'Run project', class: 'btn' %>
+            <% end %>
+            <%= link_to 'Runs', project_runs_path(project), class: 'btn' %>
+          </p>
+        </div>
+      </div>
     <% end %>
-  </tbody>
-</table>
+</div>
 
 <br />
 
 <%= link_to 'New Project', new_project_path, class: 'btn' %>
 
-<div class="row">
-  <div class="span4">
-    <div class="well"><h3>Header</h3><span class="label label-success">Success</span></div>
-  </div>
-  <div class="span4">
-    <div class="well"><h3>Header</h3><span class="label">Unknown</span></div>
-  </div>
-  <div class="span4">
-    <div class="well"><h3>Header</h3><span class="label label-warning">Failed script</span></div>
-  </div>
-  <div class="span4">
-    <div class="well"><h3>Header</h3><span class="label label-important">All failed</span></div>
-  </div>
-  <div class="span4">
-    <div class="well"><h3>Header</h3><span class="label label-info">No scripts</span></div>
-  </div>
 
-</div>
+
+
